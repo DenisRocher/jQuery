@@ -54,6 +54,9 @@ jQuery(function(){
   var padre = $('#caja .resaltado').eq(0).parent().parent().parent().find('[title="google"]');
   console.log(padre);
 
+  var busqueda = $('#elemento2').parent().parent().find('.resaltado');
+  console.log(busqueda);
+
 
 });
 
