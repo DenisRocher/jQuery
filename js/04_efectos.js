@@ -22,6 +22,7 @@
  */
 $(function(){
   //console.log('cargado efectos.js');
+  var caja = $('#caja');
 
   /** $('#ocultar').on('click',function () {
     $('#caja').css('display','none');
@@ -43,7 +44,9 @@ $(function(){
     //$('#caja').hide('fast');
     $('#caja').fadeTo('slow',0.2);
     $(this).hide('slow');
-    $('#desvanecer').hide('slow');
+    $('#desvanecer').hide('slow',function () {
+      console.log('cartel ocultado')        // LA FUNCION CALLBACK SE EJECUTA D                                     DESPUES DE HACER EL HIDE
+    });
     $('#mostrar').show('medium');
     $('#aparecer').show('normal');
   })
@@ -71,6 +74,29 @@ $(function(){
     $('#mostrar').hide();
     $('#ocultar').show();
     $('#desvanecer').show('slow');
+  })
+
+  $('#animame').on('click',function(){
+    caja.animate({marginLeft: '500px',
+                  fontSize: '40px',
+                  height: '170px'  
+                },'slow')
+        .animate({borderRadius:'900px',
+                  marginTop: '80px',
+                  }
+                ,'slow')
+        .animate({
+                borderRadius: '0px',
+                marginLeft:'0px'
+                },'slow')
+        .animate({
+                borderRadius:'100px',
+                marginTop:'0px'
+                },'slow')
+        .animate({marginLeft: '500px',
+                  fontSize: '40px',
+                  height: '170px'  
+                },'slow')
   })
 }
 );
