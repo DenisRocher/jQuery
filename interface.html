@@ -5,11 +5,100 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 
     <script type='text/javascript' src='./js/jquery-3.5.1.min.js'></script>
+
+    <link rel="stylesheet" href="./js/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="./js/jquery-ui/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="./js/jquery-ui/jquery-ui.theme.min.css" />
+
+
     <script type='text/javascript' src='./js/jquery-ui/jquery-ui.min.js'></script>
     <script type='text/javascript' src='./js/06_interface.js'></script>
+    <style>
+      .elemento{
+          width: 300px;
+          height: 200px;
+          border: 4px solid black;
+          background: lightblue;
+          margin: 20px;
+          float: left;
+      }
+      .lista-seleccionable li{
+          width: 80%;
+          padding: 20px;
+          border: 1px solid #ccc;
+          list-style: none;
+          cursor: pointer;
+      }
+      ul .ui-selecting{background: gray;} 
+      ul .ui-selected{background-color: blue;}
+
+      #elemento_movido{
+          width: 100px;
+          height: 100px;
+          border: 4px solid red;
+      }     
+      #area{
+          width: 300px;
+          height: 300px;
+          border: 4px solid green;
+      }
+      .caja_efectos{
+          background: grey;
+          float: none;
+          display: none;
+      }    
+    </style>
   </head>
   <body>
       <h1>Aprendiendo jQuery UI</h1>
+      
+      <!-- CALENDARIO-->
+      <hr>
+      <label>Calendario: </label>
+      <input type="text" id="calendario" />
+      <hr>
+      
+      <!-- Cuadros de dialogo / POPUP-->
+      <hr>
+      <button id="lanzarPopUp">PopUp</button>
+      <div id="popup" title="¿Estás seguro?" style="display: none">
+        <p>Si continuas en el curso aprenderás mucho</p>
+      </div>
+      <hr>
+ 
+      <!-- ToolTip -->
+      <h2>ToolTip</h2>
+      <a href='#' id='mis_datos' title='Acceder a la sección de mis datos'>Mis datos</a>
+      <hr>
+
+      <!-- Efectos -->
+      <button id='mostrar' title="Permite jugar con un div">Mostrar</button>
+      <div class='caja_efectos elemento'></div>
+
+      <div id="elemento_movido"></div>
+      <br>
+      <div id="area">
+
+      </div>
+      <ul class="lista-seleccionable">
+        <li>GTA V</li>
+        <li>Need for Speed</li>
+        <li>Crash</li>
+        <li>Super Mario</li>
+        <li>Galaxian</li>
+      </ul>
+      <div class="elemento">
+        Hola soy 1 elemento de la web
+      </div>
+      <div class="elemento">
+        Hola soy 2nd elemento de la web
+      </div>
+      <div class="elemento">
+        Hola soy 3ro elemento de la web
+      </div>
+      <div class="elemento">
+        Hola soy 4rto elemento de la web
+      </div>
   </body>
 </html>
 
