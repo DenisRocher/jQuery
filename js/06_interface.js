@@ -57,4 +57,8 @@ $(function(){
     dayNames: [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ],
     dateFormat: 'DD dd-mm-yy'
     });
+
+  // PESTAÑAS -- TABS
+  $('#pestanyas').tabs();
+
 });
